@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Comila</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        /* .part5{
+            height: 100vh;
+            border: 1px solid red;
+        } */
+        .part1{
+            background-image: url(slide-1.jpg);
+            background-size: cover;
+            background-position: center;
+            /* background-repeat:no-repeat; */
+            text-align: center;
+            padding: 200px 0px ;
+            color: white;
+            
+        }
+        [class*="part1btn"]{
+            border: 3px solid white;
+            padding: 10px 30px;
+            font-weight: bold;
+        }
+        .part1btnlets{
+            background-color: transparent;
+            color: white;
+        }
+        .btnpapa{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+        }
+        .part1>p{
+            margin-bottom: 50px;
+            
+        }
+        .part2{
+            background-image: url(slide-2.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            flex-direction: row;
+            
+            padding: 100px 50px;
+            color: white;
+
+        }
+        .part2a{
+            width: 100%;
+            height: 80%;
+        }
+        .compimg{
+            height: 100%;
+            width: 100%;
+        }
+        .part2b{
+            padding: 20px;
+            
+        }
+        .part2middle{
+            font-weight: bold;
+            
+        }
+        .part3{
+            background-image: url(bgimgofpart3.jpeg);
+            background-position: center;
+            
+            background-size: cover;
+            text-align: center;
+            padding: 60px 70px;
+
+        }
+        .part3top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 20px;
+            margin-top: 150px;
+        }
+        .part3bottom{
+            background-color: transparent;
+            border: 3px solid white;
+            padding: 10px 30px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 50px;
+            
+
+        }
+        ion-icon{
+            transform: scale(1.3);
+        }
+        .part4{
+            text-align: center;
+            padding: 70px 30px;
+            background-image: url(modal-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .part4middle{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        textarea{
+            margin-bottom: 10px;
+            height: 200px;
+            width: 510px;
+            padding: 15px;
+            border: 2px solid rgb(169, 159, 159);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: transparent;
+            color: whitesmoke;
+            border-radius: 5px;
+        }
+        [placeholder*="Your"]{
+            padding: 10px; 
+            padding-right: 70px;
+            /* width: 290px; */
+            background-color: transparent;
+            border: 2px solid rgb(169, 159, 159);
+            color: white;
+            border-radius: 5px;
+        }
+        .part4btn{
+            background-color: black;
+            opacity: 0.5;
+            color: rgb(255, 254, 254);
+            font-weight: bold;
+            padding: 10px 60px;
+            border: 2px solid rgb(169, 159, 159);
+            border-radius: 5px;
+        }
+        /* .part5{
+            background-image: url(triangle-divider.png);
+            background-position: center;
+            background-size: cover;
+        } */
+        .part5{
+            background-image: url(ggbackground.jpeg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            color: white;
+            padding: 40px 60px;
+            gap: 20px;
+            
+            
+        }
+        .space{
+            margin-bottom: 10px;
+            display: block;
+        }
+        @media screen and (max-width:430px){
+            .part3top{
+                flex-direction: column;
+            }
+            .part4middle{
+                flex-direction: column;
+
+            }
+            textarea{
+                height: 100px;
+                width: 250px;
+            }
+            .part2{
+                flex-direction: column;
+            }
+            .part5{
+                flex-direction: column;
+            }
+        }
+        .part1btnlets:hover{
+            transition: all 0.7s;
+            background-color: white;
+            color: black;
+            
+
+        }
+        .part1btnme:hover{
+            transition: all 0.7s;
+            background-color: transparent;
+            color: white;
+            
+        }
+        .compimg{
+            filter: drop-shadow(10px 10px 10px rgb(11, 16, 23));
+            animation-name: computer;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        [class*="box"]:hover>h2{
+            transform: scale(1.2);
+            transition: all 0.5s;
+        }
+        @keyframes computer {
+            from{
+                transform: scale(1);
+            }
+            to{
+                transform: scale(1.1);
+            }
+            
+        }
+        .part3bottom:hover{
+            transition: all 0.7s;
+            background-color: white;
+            color: black;
+        }
+        .part4btn:hover{
+            background-color: white;
+            color: black;
+            transition: all 0.7s;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="part1">
+        <h1 style="font-weight: bold;">HELLO, WE ARE COMILA</h1>
+        <p>WE ARE ALMOST <span style="color: yellow; font-weight: bold;">READY TO LAUNCH</span>  OUR <span style="color: yellow; font-weight: bold;">NEW CREATIVE</span>  WEBSITE!</p>
+        <div class="btnpapa">
+            <button class="part1btnlets">Let's begin</button>
+            <button class="part1btnme">Notify me!</button>
+        </div>
+    </div>
+    <div class="part2">
+        <div class="part2a"><img class="compimg" src="about-img.png" alt=""></div>
+        <div class="part2b">
+            <h1>OUR COMPANY</h1>
+            <span class="part2middle" style="color: yellow;">COMILA STUDIO IS BASED IN HONG KONG</span> <br> <br>
+            <p>Vivamus elit risus, porttitor id placerat ut, aliquet non quom. Pellentesque nullo metus: ornare et porttitor vel consectetur vitae erat. Vestibulum tristique semper tellus vitae condimentum. Duis sed eros eget diam dictum posuere. <br><br>
+
+             Aliquam vel gravida ligula Phasellus ut burus de libere ultrices commode commoda quam in vestibulum purus sit amet tempus euismed bortec sed condua nist</p>
+        </div>
+    </div>
+    <div class="part3">
+        <div class="part3top">
+            <div class="box1">
+                <h2 style="color: white;"> <ion-icon name="laptop-outline"></ion-icon> RESPONSIVE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, sequi quod distinctio autem, quisquam quidem possimus iusto at totam, aspernatur vel? Odio quisquam molestias vitae numquam accusamus suscipit, quos delectus.</p>
+            </div>
+            <div class="box2">
+                <h2 style="color: white;"> <ion-icon name="sync-circle-outline"></ion-icon> BOOTSTRAP</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquid porro libero eveniet aperiam animi pariatur, iusto laudantium impedit inventore eius, culpa magnam nisi possimus aut quas consequuntur alias in?</p>
+            </div>
+            <div class="box3">
+                <h2 style="color: white;"> <ion-icon name="chatbubble-ellipses-outline"></ion-icon> SUPPORT</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum aliquam ab, ducimus, nihil sapiente quod magnam totam eos ad, nemo ex vel! Sed, maiores porro incidunt delectus aliquid consequuntur quasi.</p>
+            </div>
+        </div>
+        <button class="part3bottom"> Talk to us</button>
+    </div>
+    <div class="part4">
+        <h1 style="color: whitesmoke;">GET IN TOUCH</h1>
+        <p style="color: whitesmoke;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dicta mollitia rerum iste tempore, illo vel blanditiis error unde, harum</p>
+         <div class="part4middle">
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Email">
+         </div>
+         <textarea name="" id="" placeholder="Message"></textarea><br>
+         <button class="part4btn" type="submit">Send Message</button>
+    </div>
+    <div class="part5">
+        <div class="comila">
+            <h2>COMILA</h2>
+            <span class="space" >Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>
+            <span class="space">Copyright @ 2016 Your Company</span>
+            <span class="space">Designed by Sushanth Reddy</span>
+        </div>
+        <div class="ourstudio">
+            <h2 >OUR STUDIO</h2>
+            <span class="space">120-240 alignm augua litera</span>
+            <span class="space">conwallis in vulputate 10220</span>
+            <span class="space">San Francisco, CA, USA</span>
+            <span class="space">Phone: +1 800 123 4567</span>
+            <span class="space"><ion-icon style="color: rgb(69, 69, 215);" name="logo-facebook"></ion-icon> &nbsp; <ion-icon style="color: rgb(11, 114, 118);" name="logo-twitter"></ion-icon>&nbsp; &nbsp;<ion-icon style="color: rgb(232, 232, 6);" name="logo-behance"></ion-icon>&nbsp;&nbsp;<ion-icon style="color: rgb(190, 16, 109);" name="logo-instagram"></ion-icon>&nbsp;</span>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
